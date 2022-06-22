@@ -1,11 +1,24 @@
-" LUA Configs
-lua << EOF
+-- Help
+-- :h [option_name]
+-- :h [option_name] + tab (completion)
+-- :options
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+-- vim.opt.guicursor=
+-- vim.opt.relativenumber
+-- vim.opt.nu
+-- vim.opt.showcmd
+-- vim.opt.encoding = 'utf-8'
 
--- CMP Setup
-local cmp = require('cmp')
+
+-- require('plugins')
+-- require('settings')
+-- require('mapping')
+-- require('autocompletion')
+-- require('telescope-config')
+-- require('lsp-config')
+
+-- Setup nvim-cmp.
+local cmp = require("cmp")
 local source_mapping = {
 	buffer = "[Buffer]",
 	nvim_lsp = "[LSP]",
@@ -18,6 +31,7 @@ local lspkind = require("lspkind")
 cmp.setup({
 	snippet = {
 		expand = function(args)
+			-- For `luasnip` user.
 			require("luasnip").lsp_expand(args.body)
 		end,
 	},
@@ -44,14 +58,15 @@ cmp.setup({
 	},
 
 	sources = {
+		-- tabnine completion? yayaya
 		{ name = "cmp_tabnine" },
 		{ name = "nvim_lsp" },
+		-- For luasnip user.
 		{ name = "luasnip" },
 		{ name = "buffer" },
 	},
 })
 
--- Tabnine
 local tabnine = require("cmp_tabnine.config")
 tabnine:setup({
 	max_lines = 1000,
@@ -61,7 +76,6 @@ tabnine:setup({
 	snippet_placeholder = "..",
 })
 
--- LSP Config
 local function config(_config)
 	return vim.tbl_deep_extend("force", {
 		capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
@@ -86,21 +100,6 @@ lspconfig.bashls.setup {config()}
 lspconfig.dockerls.setup {config()}
 lspconfig.vimls.setup {config()}
 
--- Snippets
-local opts = {
-	-- whether to highlight the currently hovered symbol
-	-- disable if your cpu usage is higher than you want it
-	-- or you just hate the highlight
-	-- default: true
-	highlight_hovered_item = true,
-
-	-- whether to show outline guides
-	-- default: true
-	show_guides = true,
-}
-
-require('symbols-outline').setup(opts)
-
 local snippets_paths = function()
 	local plugins = { "friendly-snippets" }
 	local paths = {}
@@ -115,13 +114,9 @@ local snippets_paths = function()
 	return paths
 end
 
-require("luasnip.loaders.from_vscode").lazy_load({
-	paths = snippets_paths(),
-	include = nil, -- Load all languages
-	exclude = {},
-})
+--  require("luasnip.loaders.from_vscode").lazy_load({
+--	paths = snippets_paths(),
+--	include = nil, -- Load all languages
+--	exclude = {},
+--  })
 
--- Comment config
-require('Comment').setup()
-
-EOF
