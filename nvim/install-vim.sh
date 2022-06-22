@@ -11,3 +11,4 @@ for f in `find . -regex ".*\.vim$\|.*\.lua$"`; do
     ln -s ~/.dotfiles/nvim/${f} ~/.config/nvim/${f}
 done
 
+ln -s ~/.dotfiles/nvim/.vimrc ~/.vimrc
