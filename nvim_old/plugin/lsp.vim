@@ -4,7 +4,7 @@ lua << EOF
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- CMP Setup
+-- cmp setup
 local cmp = require('cmp')
 local source_mapping = {
 	buffer = "[Buffer]",
@@ -51,7 +51,7 @@ cmp.setup({
 	},
 })
 
--- Tabnine
+-- tabnine
 local tabnine = require("cmp_tabnine.config")
 tabnine:setup({
 	max_lines = 1000,
@@ -61,7 +61,7 @@ tabnine:setup({
 	snippet_placeholder = "..",
 })
 
--- LSP Config
+-- LSP config
 local function config(_config)
 	return vim.tbl_deep_extend("force", {
 		capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
@@ -86,7 +86,7 @@ lspconfig.bashls.setup {config()}
 lspconfig.dockerls.setup {config()}
 lspconfig.vimls.setup {config()}
 
--- Snippets
+-- snippets
 local opts = {
 	-- whether to highlight the currently hovered symbol
 	-- disable if your cpu usage is higher than you want it
@@ -98,7 +98,6 @@ local opts = {
 	-- default: true
 	show_guides = true,
 }
-
 require('symbols-outline').setup(opts)
 
 local snippets_paths = function()
@@ -121,7 +120,7 @@ require("luasnip.loaders.from_vscode").lazy_load({
 	exclude = {},
 })
 
--- Comment config
+-- comment config
 require('Comment').setup()
 
 EOF
