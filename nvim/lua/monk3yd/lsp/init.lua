@@ -5,3 +5,4 @@ end
 
 require("monk3yd.lsp.lsp-installer")
 require("monk3yd.lsp.handlers").setup()
+require("monk3yd.lsp.null-ls")

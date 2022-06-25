@@ -32,11 +32,11 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
--- Clear highlights
-keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
-
 -- Close buffers
 keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
+
+-- Clear highlights
+keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
@@ -49,6 +49,17 @@ keymap("i", "jk", "<ESC>", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- Move text up and down (Alt)
+keymap("v", "<A-j>", ":m .+2<CR> ==", opts)
+keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+
+-- Visual Block --
+-- Move text up and down
+keymap("x", "J", ":move '>+2<CR>gv-gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "<A-j>", ":move '>+2<CR>gv-gv", opts)
+keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Plugins --
 

@@ -45,7 +45,7 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim"       -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim"     -- Useful lua functions used by lots of plugins
 
-    -- colorschemes
+    -- Colorschemes
     use "gruvbox-community/gruvbox" -- gruvbox colorscheme
 
     -- cmp plugins
@@ -56,20 +56,27 @@ return packer.startup(function(use)
     use "saadparwaiz1/cmp_luasnip"  -- snippet completions
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
+ 	use {'tzachar/cmp-tabnine',
+        run='./install.sh',
+        requires = 'hrsh7th/nvim-cmp'}
 
-    -- snippets
+    use "onsails/lspkind.nvim"          -- https://github.com/onsails/lspkind.nvim
+    use "nvim-lua/lsp_extensions.nvim"  -- https://github.com/nvim-lua/lsp_extensions.nvim
+
+    -- Snippets
     use "L3MON4D3/LuaSnip"              -- snippet engine 
     use "rafamadriz/friendly-snippets"  -- a bunch of snippets to use
 
     -- LSP
     use "neovim/nvim-lspconfig" -- enable LSP
     use "williamboman/nvim-lsp-installer" -- simple to use language server instaler
+    use "jose-elias-alvarez/null-ls.nvim" -- formatter & linting
 
-    -- telescope
+    -- Telescope
     use "nvim-telescope/telescope.nvim"    -- fuzzy finder
     -- use "nvim-telescope/telescope-media-files.nvim" -- image preview extension
 
-    -- treesitter
+    -- Treesitter
     use {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
@@ -77,18 +84,25 @@ return packer.startup(function(use)
     use "p00f/nvim-ts-rainbow"  -- nest parenthesis change colors
     use "JoosepAlviste/nvim-ts-context-commentstring" -- comments taking into account context
 
-    -- autopairs
+    -- Autopairs
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
 
-    -- comments
+    -- Comments
     use "numToStr/Comment.nvim" -- easily comment stuff
 
-    -- git
+    -- Git
     use "lewis6991/gitsigns.nvim"
 
-    -- nvimtree
+    -- NvimTree
     use "kyazdani42/nvim-web-devicons"
     use "kyazdani42/nvim-tree.lua"
+
+    -- Bufferline
+    use "akinsho/bufferline.nvim"
+    use "moll/vim-bbye"
+
+    -- Toggleterm
+    use "akinsho/toggleterm.nvim"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
