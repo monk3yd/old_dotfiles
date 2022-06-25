@@ -11,8 +11,8 @@ end
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
-    local color = vim.fn.col "." - 1
-    return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+	local col = vim.fn.col(".") - 1
+	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
 end
 
 --      some other good icons

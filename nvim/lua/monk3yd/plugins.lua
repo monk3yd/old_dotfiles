@@ -65,9 +65,36 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig" -- enable LSP
     use "williamboman/nvim-lsp-installer" -- simple to use language server instaler
 
+    -- telescope
+    use "nvim-telescope/telescope.nvim"    -- fuzzy finder
+    -- use "nvim-telescope/telescope-media-files.nvim" -- image preview extension
+
+    -- treesitter
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate",
+    }  -- syntax highlight
+    use "p00f/nvim-ts-rainbow"  -- nest parenthesis change colors
+    use "JoosepAlviste/nvim-ts-context-commentstring" -- comments taking into account context
+
+    -- autopairs
+    use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+
+    -- comments
+    use "numToStr/Comment.nvim" -- easily comment stuff
+
+    -- git
+    use "lewis6991/gitsigns.nvim"
+
+    -- nvimtree
+    use "kyazdani42/nvim-web-devicons"
+    use "kyazdani42/nvim-tree.lua"
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
 end)
+
+
