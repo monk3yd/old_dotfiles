@@ -33,9 +33,8 @@ bind "set completion-ignore-case on"
 alias v="nvim"
 
 #list
-alias ls='ls -al --color=auto'
-alias la='ls -a'
-alias ll='ls -alFh'
+alias la='ls -a --color=auto'
+alias ll='ls -alFh --color=auto'
 alias l='ls'
 alias l.="ls -A | egrep '^\.'"
 
