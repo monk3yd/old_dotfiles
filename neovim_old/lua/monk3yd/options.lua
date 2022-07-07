@@ -1,4 +1,4 @@
--- :help options
+-- For looking at options use :help options
 
 -- cursor & line
 vim.opt.guicursor=""				            -- cursor block all times
