@@ -4,6 +4,7 @@
 # Create required directories
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/nvim/lua
+mkdir -p ~/.config/nvim/lua/monk3yd/lualine/themes
 mkdir -p ~/.config/nvim/plugin
 
 # Find all config files and symlink them over to nvim config directories

@@ -134,11 +134,6 @@ _G.packer_plugins = {
     path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  gruvbox = {
-    loaded = true,
-    path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/gruvbox-community/gruvbox"
-  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/impatient.nvim",
@@ -228,6 +223,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
+  },
+  sonokai = {
+    loaded = true,
+    path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
   },
   ["telescope.nvim"] = {
     loaded = true,

@@ -50,7 +50,9 @@ return packer.startup(function(use)
   use { "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" }
 
   -- Colorschemes
-  use "gruvbox-community/gruvbox"
+  use "sainnhe/sonokai"
+  -- use "sainnhe/gruvbox-material"
+  -- use "gruvbox-community/gruvbox"
   -- use "folke/tokyonight.nvim"
 
   -- cmp plugins

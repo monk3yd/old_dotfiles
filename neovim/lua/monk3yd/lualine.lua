@@ -25,17 +25,9 @@ local diff = {
   -- separator = "%#SLSeparator#" .. "│ " .. "%*",
 }
 
-local mode = {
-  "mode",
-  fmt = function(str)
-    return "-- " .. str .. " --"
-  end,
-}
-
 local filetype = {
   "filetype",
-  icons_enabled = true,
-  icon = nil,
+  icons_enabled = false,
 }
 
 local branch = {
@@ -65,15 +57,14 @@ local spaces = {
   function()
     return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
   end,
-  -- padding = 0,
-  -- separator = "%#SLSeparator#" .. " │" .. "%*",
 }
 
 lualine.setup {
   options = {
     globalstatus = true,
     icons_enabled = true,
-    theme = "auto",
+    theme = "sonokai",
+    -- theme = "gruvbox-material",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     -- disabled_filetypes = { "alpha", "dashboard" },
