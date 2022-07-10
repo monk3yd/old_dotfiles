@@ -77,20 +77,25 @@ keys = [
         lazy.layout.increase_nmaster(),
         ),
 
+    # ROTATE THROUGH WINDOWS IN GROUP
+    Key([mod], "Left", lazy.group.prev_window()),
+    Key([mod], "Right", lazy.group.next_window()),
+
+
     # FLIP LAYOUT FOR MONADTALL/MONADWIDE
     Key([mod, "shift"], "f", lazy.layout.flip()),
 
     # FLIP LAYOUT FOR BSP
-    Key([mod, "mod1"], "k", lazy.layout.flip_up()),
-    Key([mod, "mod1"], "j", lazy.layout.flip_down()),
-    Key([mod, "mod1"], "l", lazy.layout.flip_right()),
-    Key([mod, "mod1"], "h", lazy.layout.flip_left()),
+    # Key([mod, "mod1"], "k", lazy.layout.flip_up()),
+    # Key([mod, "mod1"], "j", lazy.layout.flip_down()),
+    # Key([mod, "mod1"], "l", lazy.layout.flip_right()),
+    # Key([mod, "mod1"], "h", lazy.layout.flip_left()),
 
     # MOVE WINDOWS UP OR DOWN BSP LAYOUT
-    Key([mod, "shift"], "k", lazy.layout.shuffle_up()),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down()),
-    Key([mod, "shift"], "h", lazy.layout.shuffle_left()),
-    Key([mod, "shift"], "l", lazy.layout.shuffle_right()),
+    # Key([mod, "shift"], "k", lazy.layout.shuffle_up()),
+    # Key([mod, "shift"], "j", lazy.layout.shuffle_down()),
+    # Key([mod, "shift"], "h", lazy.layout.shuffle_left()),
+    # Key([mod, "shift"], "l", lazy.layout.shuffle_right()),
 
     # MOVE WINDOWS UP OR DOWN MONADTALL/MONADWIDE LAYOUT
     Key([mod, "shift"], "Up", lazy.layout.shuffle_up()),
@@ -140,8 +145,8 @@ for i in groups:
 # LAYOUT VARIABLES
 gaps = 5
 border_width = 2
-border_focus_color = "#b16286"
-border_normal_color = "#a89984"
+border_focus_color = "#fc5d7c"
+border_normal_color = "#595f6f"
 
 
 def init_layout_theme():
@@ -156,35 +161,62 @@ def init_layout_theme():
 layout_theme = init_layout_theme()
 layouts = [
     layout.MonadTall(margin=8, border_width=border_width, border_focus=border_focus_color, border_normal=border_normal_color),
-    layout.MonadWide(margin=8, border_width=border_width, border_focus=border_focus_color, border_normal=border_normal_color),
-    layout.Matrix(**layout_theme),
-    layout.Bsp(**layout_theme),
+    layout.Max(**layout_theme),
     layout.Floating(**layout_theme),
-    layout.RatioTile(**layout_theme),
-    layout.Max(**layout_theme)
+    layout.Matrix(**layout_theme),
+    # layout.RatioTile(**layout_theme),
+    # layout.Stack(**layout_theme),
+    # layout.Spiral(**layout_theme),
+    # layout.MonadWide(margin=8, border_width=border_width, border_focus=border_focus_color, border_normal=border_normal_color),
+    # layout.Bsp(**layout_theme),
 ]
 
 
 # COLORS FOR THE BAR
 # Theme name : Gruvbox
+# def init_colors():
+#     return [
+#         ["#282828", "#282828"],  # color 0  # black/background
+#         ["#cc241d", "#cc241d"],  # color 1  # red
+#         ["#98971a", "#98971a"],  # color 2  # green
+#         ["#d79921", "#d79921"],  # color 3  # yellow
+#         ["#458588", "#458588"],  # color 4  # blue
+#         ["#b16286", "#b16286"],  # color 5  # magenta/purple
+#         ["#689d6a", "#689d6a"],  # color 6  # cyan/aqua
+#         ["#a89984", "#a89984"],  # color 7  # white/gray
+#         ["#928374", "#928374"],  # color 8  # gray
+#         ["#fb4934", "#fb4934"],  # color 9  # red_alt
+#         ["#b8bb26", "#b8bb26"],  # color 10 # green_alt
+#         ["#fabd2f", "#fabd2f"],  # color 11 # yellow_alt
+#         ["#83a598", "#83a598"],  # color 12 # blue_alt
+#         ["#d3869b", "#d3869b"],  # color 13 # magenta_alt
+#         ["#8ec07c", "#8ec07c"],  # color 14 # cyan_alt
+#         ["#ebdbb2", "#ebdbb2"],  # color 15 # white/foreground
+#     ]
+#
+#
+# colors = init_colors()
+
+# Theme name : Monokai
 def init_colors():
     return [
-        ["#282828", "#282828"],  # color 0  # black/background
-        ["#cc241d", "#cc241d"],  # color 1  # red
-        ["#98971a", "#98971a"],  # color 2  # green
-        ["#d79921", "#d79921"],  # color 3  # yellow
-        ["#458588", "#458588"],  # color 4  # blue
-        ["#b16286", "#b16286"],  # color 5  # magenta/purple
-        ["#689d6a", "#689d6a"],  # color 6  # cyan/aqua
-        ["#a89984", "#a89984"],  # color 7  # white/gray
-        ["#928374", "#928374"],  # color 8  # gray
-        ["#fb4934", "#fb4934"],  # color 9  # red_alt
-        ["#b8bb26", "#b8bb26"],  # color 10 # green_alt
-        ["#fabd2f", "#fabd2f"],  # color 11 # yellow_alt
-        ["#83a598", "#83a598"],  # color 12 # blue_alt
-        ["#d3869b", "#d3869b"],  # color 13 # magenta_alt
-        ["#8ec07c", "#8ec07c"],  # color 14 # cyan_alt
-        ["#ebdbb2", "#ebdbb2"],  # color 15 # white/foreground
+        ["#181819", "#181819"],  # color 0  # black/background
+        ["#fc5d7c", "#fc5d7c"],  # color 1  # red
+        ["#9ed072", "#9ed072"],  # color 2  # green
+        ["#e7c664", "#e7c664"],  # color 3  # yellow
+        ["#76cce0", "#76cce0"],  # color 4  # blue
+        ["#b39df3", "#b39df3"],  # color 5  # magenta/purple
+        ["#f39660", "#f39660"],  # color 6  # cyan/aqua/orange
+        ["#7f8490", "#7f8490"],  # color 7  # white/gray
+        ["#595f6f", "#595f6f"],  # color 8  # gray
+        ["#55393d", "#55393d"],  # color 9  # red_alt
+        ["#394634", "#394634"],  # color 10 # green_alt
+        ["#4e432f", "#4e432f"],  # color 11 # yellow_alt
+        ["#354157", "#354157"],  # color 12 # blue_alt
+        ["#b39df3", "#b39df3"],  # color 13 # magenta_alt
+        ["#f39660", "#f39660"],  # color 14 # cyan_alt
+        ["#e2e2e3", "#e2e2e3"],  # color 15 # white_alt/foreground
+        ['#2c2e34', '#2c2e34'],  # color 16 # bg0
     ]
 
 
@@ -202,7 +234,7 @@ monitoring_icon_size = 22
 tray_icon_size = 20
 
 # Colors
-background = colors[0]
+background = colors[16]
 foreground = colors[15]
 
 # Separators
@@ -230,6 +262,9 @@ def init_widgets_list():
     # prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
     widgets_list = [
+        widget.Spacer(
+            length=5
+        ),
         # WORKSPACES
         widget.GroupBox(
             font=font,
@@ -237,15 +272,26 @@ def init_widgets_list():
             padding_x=14,
             highlight_color=background,  # highlight box color (same as bg)
             highlight_method="line",
-            block_highlight_text_color=colors[5],  # focus text/icon color
-            this_current_screen_border=colors[5],  # bottom border color when focus
+            block_highlight_text_color=colors[1],  # focus text/icon color
+            this_current_screen_border=colors[1],  # bottom border color when focus
             borderwidth=2,  # bottom border width
-            active=colors[13],  # open windows
+            active=colors[5],  # open windows
             inactive=colors[8],  # no windows
             disable_drag=True,
             rounded=False,
             center_aligned=True,
             hide_unused=False,
+        ),
+        widget.Sep(
+            linewidth=sep_linewidth,
+            padding=sep_padding,
+            size_percent=sep_size_percent
+        ),
+        # WINDOW
+        widget.WindowName(
+            font=font,
+            fontsize=fontsize,
+            foreground=colors[1]
         ),
         widget.Sep(
             linewidth=sep_linewidth,
@@ -261,12 +307,6 @@ def init_widgets_list():
             linewidth=sep_linewidth,
             padding=sep_padding,
             size_percent=sep_size_percent
-        ),
-        # WINDOW
-        widget.WindowName(
-            font=font,
-            fontsize=fontsize,
-            foreground=colors[11]
         ),
         # KEYBOARD LAYOUT
         widget.KeyboardLayout(
@@ -284,17 +324,18 @@ def init_widgets_list():
             padding=sep_padding,
             size_percent=sep_size_percent
         ),
-        # THERMALSENSOR
+        # THERMALSENSOR 﨏
         widget.TextBox(
             fontsize=monitoring_icon_size,
-            text=" 﨏 ",
+            text="  ",
             padding=0,
-            foreground=["#cc241d", "#458588"]  # from blue to red
+            # foreground=["#cc241d", "#458588"]  # from blue to red
+            foreground=colors[4]  # from blue to red
         ),
         widget.ThermalSensor(
             font=font,
             fontsize=fontsize,
-            fmt="TEMP {}",
+            fmt="TEMP {} ",
             foreground=foreground,
             metric=True,
             padding=3,
@@ -312,10 +353,10 @@ def init_widgets_list():
             fontsize=monitoring_icon_size,
             text=" ﯟ ",
             padding=0,
-            foreground=colors[4]
+            foreground=colors[2]
         ),
         widget.Memory(
-            format="MEM {MemUsed:.0f}M",
+            format="MEM {MemUsed:.0f}M ",
             measure_mem="M",
             update_interval=1,
         ),
@@ -332,7 +373,7 @@ def init_widgets_list():
             padding=0,
         ),
         widget.CPU(
-            format="CPU {load_percent}%",
+            format="CPU {load_percent}% ",
             update_interval=1.0
         ),
         widget.Sep(
@@ -344,12 +385,13 @@ def init_widgets_list():
         widget.TextBox(
             font=font,
             fontsize=monitoring_icon_size,
-            text="  ",
+            text="  ",
+            # text="  ",
             foreground=colors[3],
             padding=0,
         ),
         widget.Clock(
-            format="%d/%m/%Y %H:%M:%S",
+            format="%d/%m/%Y %H:%M:%S ",
             udpate_internal=1.0
         ),
         widget.Sep(
@@ -360,7 +402,10 @@ def init_widgets_list():
         # SYSTRAY
         widget.Systray(
             icon_size=tray_icon_size,
-            padding=4
+            padding=4,
+        ),
+        widget.Spacer(
+            length=5
         ),
     ]
     return widgets_list
