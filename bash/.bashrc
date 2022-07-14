@@ -353,7 +353,7 @@ alias personal='cp -Rf /personal/* ~'
 #cpufetch
 #colorscript random
 
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

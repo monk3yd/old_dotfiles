@@ -38,7 +38,7 @@ local options = {
   softtabstop = 4,                         --
   shiftwidth = 4,                          -- the number of spaces inserted for each indentation
   expandtab = true,                        -- convert tabs to spaces
-  smartindent = true,                      -- make indenting smarter again
+  smartindent = false,                      -- make indenting smarter again
   showtabline = 0,                         -- always show tabs
 
   -- cmdline & statusbar

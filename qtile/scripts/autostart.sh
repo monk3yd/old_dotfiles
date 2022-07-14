@@ -41,6 +41,7 @@ run sxhkd -c ~/.config/qtile/sxhkd/sxhkdrc &
 
 #starting utility applications at boot time
 run alacritty
+# run todoist &  # TODO
 # run variety &
 run nm-applet &
 run pamac-tray &

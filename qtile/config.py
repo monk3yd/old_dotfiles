@@ -98,10 +98,14 @@ keys = [
     # Key([mod, "shift"], "l", lazy.layout.shuffle_right()),
 
     # MOVE WINDOWS UP OR DOWN MONADTALL/MONADWIDE LAYOUT
-    Key([mod, "shift"], "Up", lazy.layout.shuffle_up()),
-    Key([mod, "shift"], "Down", lazy.layout.shuffle_down()),
-    Key([mod, "shift"], "Left", lazy.layout.swap_left()),
-    Key([mod, "shift"], "Right", lazy.layout.swap_right()),
+    Key([mod, "shift"], "k", lazy.layout.shuffle_up()),
+    Key([mod, "shift"], "j", lazy.layout.shuffle_down()),
+    Key([mod, "shift"], "h", lazy.layout.swap_left()),
+    Key([mod, "shift"], "l", lazy.layout.swap_right()),
+    # Key([mod, "shift"], "Up", lazy.layout.shuffle_up()),
+    # Key([mod, "shift"], "Down", lazy.layout.shuffle_down()),
+    # Key([mod, "shift"], "Left", lazy.layout.swap_left()),
+    # Key([mod, "shift"], "Right", lazy.layout.swap_right()),
 
     # TOGGLE FLOATING LAYOUT
     Key([mod, "shift"], "space", lazy.window.toggle_floating()),
@@ -136,10 +140,10 @@ for i in groups:
         Key([mod, "shift"], "Tab", lazy.screen.prev_group()),
 
         # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND STAY ON WORKSPACE
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name)),
+        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name)),
 
         # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND FOLLOW MOVED WINDOW TO WORKSPACE
-        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name), lazy.group[i.name].toscreen()),
+        Key([mod, "shift"], i.name, lazy.window.togroup(i.name), lazy.group[i.name].toscreen()),
     ])
 
 # LAYOUT VARIABLES
