@@ -16,6 +16,7 @@ require("monk3yd.lualine")
 require("monk3yd.toggleterm")
 require("monk3yd.project")
 require("monk3yd.impatient")
+require("monk3yd.illuminate")
 require("monk3yd.indentline")
 require("monk3yd.alpha")
 

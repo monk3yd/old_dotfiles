@@ -22,7 +22,6 @@ local diff = {
   colored = false,
   symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
   cond = hide_in_width,
-  -- separator = "%#SLSeparator#" .. "│ " .. "%*",
 }
 
 local filetype = {
@@ -34,19 +33,7 @@ local branch = {
   "branch",
   icons_enabled = true,
   icon = "",
-  -- icon = "%#SLGitIcon#" .. "" .. "%*" .. "%#SLBranchName#",
 }
-
--- cool function for progress
--- local progress = function()
---   local current_line = vim.fn.line "."
---   local total_lines = vim.fn.line "$"
---   local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
---   local line_ratio = current_line / total_lines
---   local index = math.ceil(line_ratio * #chars)
---   return chars[index]
---   -- return "%#SLProgress#" .. chars[index] .. "%*"
--- end
 
 local location = {
   "location",
@@ -63,28 +50,20 @@ lualine.setup {
   options = {
     globalstatus = true,
     icons_enabled = true,
-    theme = "sonokai",
+    theme = "sonokai",  -- auto
     -- theme = "gruvbox-material",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
-    -- disabled_filetypes = { "alpha", "dashboard" },
+    disabled_filetypes = { "alpha", "dashboard" },
     always_divide_middle = true,
   },
   sections = {
-    lualine_a = { branch },
-    lualine_b = { diagnostics },
-    lualine_c = {},
+    lualine_a = { "mode" },
+    lualine_b = { branch },
+    lualine_c = { diagnostics },
     lualine_x = { diff, spaces, "encoding", filetype },
     lualine_y = { location },
     lualine_z = { "progress" },
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = { "location" },
-    lualine_y = {},
-    lualine_z = {},
   },
   tabline = {},
   extensions = {},
