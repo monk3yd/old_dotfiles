@@ -8,7 +8,6 @@ local actions = require("telescope.actions")
 
 telescope.setup {
   defaults = {
-
     prompt_prefix = "" .. " ",
     selection_caret = " ",
     path_display = { "smart" },
@@ -133,7 +132,7 @@ telescope.setup {
       },
     },
   },
-  pickers = {
+  -- pickers = {
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
     --   picker_config_key = value,
@@ -141,13 +140,13 @@ telescope.setup {
     -- }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
-  },
-  extensions = {
+  -- },
+  -- extensions = {
     -- media_files = {
     --   -- filetypes whitelist
     --   -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
     --   filetypes = { "png", "webp", "jpg", "jpeg" },
     --   find_cmd = "rg", -- find command (defaults to `fd`)
     -- },
-  },
+  -- },
 }
