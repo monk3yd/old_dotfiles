@@ -6,6 +6,7 @@ mkdir -p ~/.config/nvim
 mkdir -p ~/.config/nvim/lua
 mkdir -p ~/.config/nvim/lua/monk3yd/lualine/themes
 mkdir -p ~/.config/nvim/plugin
+mkdir -p ~/.config/nvim/lua/monk3yd/bfs
 
 # Find all config files and symlink them over to nvim config directories
 for f in `find . -regex ".*\.lua$"`; do

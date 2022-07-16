@@ -1,11 +1,11 @@
 -- TODO: scope open buffers to project
 
-require "split"
+-- require "split"
 
 local M = {}
 
-local config = require "user.bfs.config"
-local keymaps = require("user.bfs.keymaps")
+local config = require("monk3yd.bfs.config")
+local keymaps = require("monk3yd.bfs.keymaps")
 
 M.bopen = {}
 

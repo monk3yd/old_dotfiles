@@ -95,7 +95,7 @@ local m_mappings = {
   m = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon" },
   ["."] = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Harpoon Next" },
   [","] = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Harpoon Prev" },
-  l = { "<cmd>lua require('user.bfs').open()<cr>", "Buffers" },
+  l = { "<cmd>lua require('monk3yd.bfs').open()<cr>", "Buffers" },
   j = { "<cmd>silent BookmarkNext<cr>", "Next" },
   s = { "<cmd>Telescope harpoon marks<cr>", "Search Files" },
   k = { "<cmd>silent BookmarkPrev<cr>", "Prev" },
@@ -110,7 +110,7 @@ local m_mappings = {
 
 local mappings = {
   ["a"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Action" },
-  b = { "<cmd>lua require('user.bfs').open()<cr>", "Buffers" },
+  b = { "<cmd>lua require('monk3yd.bfs').open()<cr>", "Buffers" },
   -- b = { "<cmd>JABSOpen<cr>", "Buffers" },
   -- ["b"] = {
   --   "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -119,7 +119,7 @@ local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w<CR>", "Write" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No HL" },
-  ["q"] = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" },
+  ["q"] = { '<cmd>lua require("monk3yd.functions").smart_quit()<CR>', "Quit" },
   ["/"] = { '<cmd>lua require("Comment.api").toggle_current_linewise()<CR>', "Comment" },
   -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -155,11 +155,11 @@ local mappings = {
 
   o = {
     name = "Options",
-    w = { '<cmd>lua require("user.functions").toggle_option("wrap")<cr>', "Wrap" },
-    r = { '<cmd>lua require("user.functions").toggle_option("relativenumber")<cr>', "Relative" },
-    l = { '<cmd>lua require("user.functions").toggle_option("cursorline")<cr>', "Cursorline" },
-    s = { '<cmd>lua require("user.functions").toggle_option("spell")<cr>', "Spell" },
-    t = { '<cmd>lua require("user.functions").toggle_tabline()<cr>', "Tabline" },
+    w = { '<cmd>lua require("monk3yd.functions").toggle_option("wrap")<cr>', "Wrap" },
+    r = { '<cmd>lua require("monk3yd.functions").toggle_option("relativenumber")<cr>', "Relative" },
+    l = { '<cmd>lua require("monk3yd.functions").toggle_option("cursorline")<cr>', "Cursorline" },
+    s = { '<cmd>lua require("monk3yd.functions").toggle_option("spell")<cr>', "Spell" },
+    t = { '<cmd>lua require("monk3yd.functions").toggle_tabline()<cr>', "Tabline" },
   },
 
   -- s = {
@@ -289,7 +289,7 @@ local mappings = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace Symbols",
     },
-    t = { '<cmd>lua require("user.functions").toggle_diagnostics()<cr>', "Toggle Diagnostics" },
+    t = { '<cmd>lua require("monk3yd.functions").toggle_diagnostics()<cr>', "Toggle Diagnostics" },
     u = { "<cmd>LuaSnipUnlinkCurrent<cr>", "Unlink Snippet" },
   },
 
