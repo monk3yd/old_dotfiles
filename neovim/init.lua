@@ -27,3 +27,4 @@ require("monk3yd.tabnine")
 
 -- Experimental
 require("monk3yd.auto-session")
+require("monk3yd.whichkey")

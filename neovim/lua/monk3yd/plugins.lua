@@ -118,13 +118,13 @@ return packer.startup(function(use)
   -- END OF CORE PLUGINS
   -- EXPERIMENTAL EXTENSIONS
   use "rmagatti/auto-session"
+  -- use "tom-anders/telescope-vim-bookmarks.nvim"
+  use "folke/which-key.nvim"
 
 
   -- "Want to install" Plugins
-  -- use "folke/which-key.nvim"
   -- use "hrsh7th/cmp-cmdline" -- cmdline completions
   -- use "hrsh7th/cmp-emoji"
-  -- use "tom-anders/telescope-vim-bookmarks.nvim"
   -- use "nvim-telescope/telescope-media-files.nvim"
   -- use "lalitmee/browse.nvim"
   -- use "nvim-treesitter/playground"
