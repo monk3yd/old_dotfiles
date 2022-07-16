@@ -234,6 +234,11 @@ _G.packer_plugins = {
     path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/sonokai",
     url = "https://github.com/sainnhe/sonokai"
   },
+  ["telescope-vim-bookmarks.nvim"] = {
+    loaded = true,
+    path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/telescope-vim-bookmarks.nvim",
+    url = "https://github.com/tom-anders/telescope-vim-bookmarks.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/telescope.nvim",

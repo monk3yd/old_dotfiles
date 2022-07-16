@@ -118,7 +118,7 @@ return packer.startup(function(use)
   -- END OF CORE PLUGINS
   -- EXPERIMENTAL EXTENSIONS
   use "rmagatti/auto-session"
-  -- use "tom-anders/telescope-vim-bookmarks.nvim"
+  use "tom-anders/telescope-vim-bookmarks.nvim"
   use "folke/which-key.nvim"
 
 
