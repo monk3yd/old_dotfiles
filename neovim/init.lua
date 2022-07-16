@@ -26,6 +26,8 @@ require("monk3yd.dap")
 require("monk3yd.tabnine")
 
 -- Experimental
-require("monk3yd.auto-session")
 require("monk3yd.whichkey")
+require("monk3yd.auto-session")
 require("monk3yd.bookmark")
+require("monk3yd.dressing")
+
