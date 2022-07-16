@@ -9,7 +9,7 @@ local options = {
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
   fileencoding = "utf-8",                  -- the encoding written to a file
-  hlsearch = false,                         -- highlight all matches on previous search pattern
+  hlsearch = false,                        -- highlight all matches on previous search pattern
   ignorecase = true,                       -- ignore case in search patterns
   mouse = "a",                             -- allow the mouse to be used in neovim
   pumheight = 10,                          -- pop up menu height
@@ -38,7 +38,7 @@ local options = {
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
-  guifont = "MonoLisa:h17",               -- the font used in graphical neovim applications default: "monospace:h17"
+  guifont = "MonoLisa:h17",                -- the font used in graphical neovim applications default: "monospace:h17"
 
   -- personal
   guicursor = "",				           -- cursor block all times
