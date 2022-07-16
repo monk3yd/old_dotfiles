@@ -1,4 +1,4 @@
--- Basic Essentials
+-- Core Essentials
 require("monk3yd.options")
 require("monk3yd.keymaps")
 require("monk3yd.plugins")
@@ -20,9 +20,10 @@ require("monk3yd.illuminate")
 require("monk3yd.indentline")
 require("monk3yd.alpha")
 
--- Advanced Essentials
+--  Core Advanced Essentials
 require("monk3yd.lsp")
 require("monk3yd.dap")
-
--- Advanced Optionals
 require("monk3yd.tabnine")
+
+-- Experimental
+require("monk3yd.auto-session")
