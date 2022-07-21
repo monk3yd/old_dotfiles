@@ -98,22 +98,22 @@ scrolling:
 font:
   # Normal (roman) font face
   normal:
-    family: "Hack"
+    family: "MonoLisa"
     style: Regular
 
   # Bold font face
   bold:
-    family: "Hack" 
+    family: "MonoLisa" 
     style: Bold
 
   # Italic font face
   italic:
-    family: "Hack" 
+    family: "MonoLisa" 
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: monospace
+    family: "MonoLisa"
     style: Bold Italic
 
   # Point size
