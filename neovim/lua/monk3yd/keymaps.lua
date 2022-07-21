@@ -74,6 +74,9 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- Split screen vertically
+keymap("n", "<leader>vs", ":vsplit<CR>", opts)  -- fzf find files
+
 -- Plugins
 
 -- NvimTree
