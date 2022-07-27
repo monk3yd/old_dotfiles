@@ -1,6 +1,6 @@
 -- Basic Essentials
 require("monk3yd.options")
-require("monk3yd.keymaps")
+-- require("monk3yd.keymaps")
 -- require("monk3yd.plugins")
 -- require("monk3yd.autocommands")
 -- require("monk3yd.colorscheme")
