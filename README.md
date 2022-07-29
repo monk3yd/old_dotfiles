@@ -3,28 +3,44 @@
 ### Installs - TODO create bash script for installing
 - qtile
 - neovim (source)
-- nerdfonts (script) + MonoLisa
+- sxhkd
 - alacritty
 - kitty
-- git
-- lazygit
+- firefox
 - rofi
 - thunar
 - zsh
-- vscodium
+- git (generate ssh key)
+- lazygit
+- nerdfonts (script) + MonoLisa
+- vscodium (init.vim; settings.json; keybindings.json)
+- insync (~/GDrive...)
 - flameshot
-- insync
 - discord
 - steam
 - vlc
 - gimp
 - feh
 - nitrogen
-- sxhkd
 - archlinux-betterlockscreen
 - archlinux-tweak-tool
+- balenaEtcher (usb iso writer)
 
 ### Important files
 - autostart.sh
 - picom.conf
-- X
+- X/
+- bash scripts:
+  - installer.sh
+
+### Actions
+- change sddm background image
+- change betterlockscreen background image
+
+### btrfs snapshot
+
+### wanna install/testing
+- variety
+- awesome
+- xmonad
+- bspwm
