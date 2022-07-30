@@ -2,3 +2,5 @@ applications/
 *.AppImage
 
 .ssh
+fonts/NerdFonts
+fonts/.uuid
